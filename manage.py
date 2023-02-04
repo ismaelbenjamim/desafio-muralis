@@ -3,6 +3,8 @@
 import os
 import sys
 
+from desafio_muralis.settings import BASE_DIR
+
 
 def main():
     """Run administrative tasks."""
@@ -19,4 +21,6 @@ def main():
 
 
 if __name__ == '__main__':
+    if not os.path.exists(f"{BASE_DIR}/logs/"):
+        os.mkdir(f"{BASE_DIR}/logs/")
     main()
